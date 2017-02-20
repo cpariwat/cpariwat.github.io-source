@@ -1,0 +1,14 @@
+{
+  "globals": {
+    "document": true,
+    "window": true,
+    "PIXI": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-inline-comments": 0
+  }
+}

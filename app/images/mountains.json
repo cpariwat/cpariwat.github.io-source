@@ -1,0 +1,39 @@
+{"frames": {
+
+"1":
+{
+	"frame": {"x":1,"y":1,"w":270,"h":145},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":270,"h":145},
+	"sourceSize": {"w":270,"h":145},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"2":
+{
+	"frame": {"x":1,"y":148,"w":275,"h":199},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":275,"h":199},
+	"sourceSize": {"w":275,"h":199},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"3":
+{
+	"frame": {"x":1,"y":349,"w":330,"h":289},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":330,"h":289},
+	"sourceSize": {"w":330,"h":289},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "mountains.svg",
+	"format": "RGBA8888",
+	"size": {"w":332,"h":639},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:031a8bad00a7c91072e58045450d614e:1b8cdd36a95ea59d7a896070b32afbff:e4b1273e524254e824e1fe1c48e8866e$"
+}
+}

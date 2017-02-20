@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1068px" height="290px" viewBox="0 0 1068 290" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>back</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Mobile-Portrait" sketch:type="MSArtboardGroup" transform="translate(-2.000000, -734.000000)" fill="#1B5E20">
+            <g id="mountains" sketch:type="MSLayerGroup" transform="translate(0.000000, 734.000000)">
+                <g id="back" sketch:type="MSShapeGroup">
+                    <polygon points="165 4 330 294 0 294 "></polygon>
+                    <polygon id="back-copy" points="575 4 740 294 410 294 "></polygon>
+                    <polygon id="back-copy-2" points="905 0 1070 290 740 290 "></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
