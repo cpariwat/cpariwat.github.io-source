@@ -1,9 +1,27 @@
+@import "custom/_variables";
 @import "src/material-design-lite";
 
-@import "custom/_variables";
-// base
-@import "custom/base/_typography";
+// mixins
+@import "mixins/media_query";
 
+// base
+@import "custom/base/typography";
+
+// layout
 @import "custom/layout/default";
 
+// module
 @import "custom/module/background";
+@import "custom/module/top-header";
+@import "custom/module/play-elements";
+@import "custom/module/petite-village";
+@import "custom/module/wall";
+@import "custom/module/separator";
+@import "custom/module/overlay";
+@import "custom/module/tooltip-icon";
+@import "custom/module/ob2-container";
+
+//theme
+@import "custom/theme/welcome";
+@import "custom/theme/works";
+@import "custom/theme/contact-me";

@@ -1,0 +1,68 @@
+$bubble-bg-color: #edc951;
+
+.ob2-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 1rem;
+  height: 50%;
+  width: 100%;
+
+  @include tablet() {
+    width: 75%;
+  }
+
+  @include desktop() {
+    width: 50%;
+  }
+
+  .thought-bubble {
+    position: relative;
+    background: $bubble-bg-color;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    line-height: 2rem;
+    font-weight: bolder;
+    z-index: map-get($zIndex, 'high');
+    width: 40%;
+    left: 0;
+    top: 50%;
+    margin-left: 1rem;
+
+    //@include tablet() {
+    //  top: 0;
+    //  width: 100%;
+    //}
+
+    &:after  {
+      left: 100%;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(136, 183, 213, 0);
+      border-left-color: $bubble-bg-color;
+      border-width: 10px;
+      margin-top: -10px;
+      //
+      //@include tablet() {
+      //  left: auto;
+      //  top: 100%;
+      //  right: 15px;
+      //  border-top-color: $bubble-bg-color;
+      //  margin-left: -10px;
+      //}
+    }
+  }
+
+  .ob2 {
+    height: 75%;
+    position: absolute;
+    bottom: -5%;
+    right: 0;
+  }
+}

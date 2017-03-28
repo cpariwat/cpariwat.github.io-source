@@ -1,0 +1,46 @@
+.overlay {
+  position: absolute;
+  width: 30px;
+  height: inherit;
+  z-index: map-get($zIndex, 'higher');
+  background-size: 15px auto;
+  background-repeat-y: repeat;
+  background-repeat-x: no-repeat;
+  cursor: pointer;
+
+  @include desktop() {
+    width: 80px;
+    background-size: 30px auto;
+  }
+
+
+  .material-icons {
+    display: none;
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+
+    @include desktop() {
+      display: block;
+    }
+  }
+
+  &.left {
+    background-image: linear-gradient(90deg, rgba(0,0,0,0.50) 0%, rgba(255,255,255,0) 100%);
+    left: 0;
+
+    .material-icons {
+      left: 0;
+    }
+  }
+
+  &.right {
+    background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.50) 0%, rgba(255, 255, 255, 0) 100%);
+    right: 0;
+    background-position: right;
+
+    .material-icons {
+      right: 0;
+    }
+  }
+}

@@ -2,7 +2,8 @@
   "globals": {
     "document": true,
     "window": true,
-    "PIXI": true
+    "PIXI": true,
+    "Two": true
   },
   "parserOptions": {
     "ecmaVersion": 6,

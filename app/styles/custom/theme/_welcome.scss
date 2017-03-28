@@ -1,0 +1,15 @@
+section.welcome {
+  .compass-container {
+    position: absolute;
+    bottom: 15%;
+    left: calc(50% - 60px);
+
+    @include tablet() {
+      bottom: 30%;
+    }
+  }
+
+  .world {
+    z-index: map-get($zIndex, 'deeper');
+  }
+}

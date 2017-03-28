@@ -76,5 +76,6 @@ import Engine from './engine';
   }
 
   // Your custom JavaScript goes here
-  new Engine();
+  let wholeEngine = new Engine();
+  wholeEngine.run();
 })();

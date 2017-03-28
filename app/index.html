@@ -1,361 +1,631 @@
 <!doctype html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Starter Kit</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pariwat Chaichomphu, Web Developer in Bangkok</title>
 
-    <!-- Disable tap highlight on IE -->
-    <meta name="msapplication-tap-highlight" content="no">
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
 
-    <!-- Web Application Manifest -->
-    <link rel="manifest" href="manifest.json">
+  <!-- Web Application Manifest -->
+  <link rel="manifest" href="manifest.json">
 
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Web Starter Kit">
-    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Web Starter Kit">
+  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
 
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
-    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
 
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#2F3BA2">
+  <!-- Color the status bar on mobile devices -->
+  <meta name="theme-color" content="#fff">
 
-    <!-- Color the status bar on mobile devices -->
-    <meta name="theme-color" content="#2F3BA2">
-
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
-
-    <!-- Material Design icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-    <link rel="stylesheet" href="styles/main.css">
-  </head>
-  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-
-      <!--<div class="android-header mdl-layout__header mdl-layout__header&#45;&#45;waterfall">-->
-        <!--<div class="mdl-layout__header-row">-->
-              <!--<span class="android-title mdl-layout-title">-->
-                <!--<img class="android-logo-image" src="images/android-logo.png">-->
-              <!--</span>-->
-          <!--&lt;!&ndash; Add spacer, to align navigation to the right in desktop &ndash;&gt;-->
-          <!--<div class="android-header-spacer mdl-layout-spacer"></div>-->
-          <!--<div-->
-            <!--class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield&#45;&#45;expandable mdl-textfield&#45;&#45;floating-label mdl-textfield&#45;&#45;align-right mdl-textfield&#45;&#45;full-width">-->
-            <!--<label class="mdl-button mdl-js-button mdl-button&#45;&#45;icon" for="search-field">-->
-              <!--<i class="material-icons">search</i>-->
-            <!--</label>-->
-            <!--<div class="mdl-textfield__expandable-holder">-->
-              <!--<input class="mdl-textfield__input" type="text" id="search-field">-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--&lt;!&ndash; Navigation &ndash;&gt;-->
-          <!--<div class="android-navigation-container">-->
-            <!--<nav class="android-navigation mdl-navigation">-->
-              <!--<a class="mdl-navigation__link mdl-typography&#45;&#45;text-uppercase" href="">Phones</a>-->
-              <!--<a class="mdl-navigation__link mdl-typography&#45;&#45;text-uppercase" href="">Tablets</a>-->
-              <!--<a class="mdl-navigation__link mdl-typography&#45;&#45;text-uppercase" href="">Wear</a>-->
-              <!--<a class="mdl-navigation__link mdl-typography&#45;&#45;text-uppercase" href="">TV</a>-->
-              <!--<a class="mdl-navigation__link mdl-typography&#45;&#45;text-uppercase" href="">Auto</a>-->
-              <!--<a class="mdl-navigation__link mdl-typography&#45;&#45;text-uppercase" href="">One</a>-->
-              <!--<a class="mdl-navigation__link mdl-typography&#45;&#45;text-uppercase" href="">Play</a>-->
-            <!--</nav>-->
-          <!--</div>-->
-          <!--<span class="android-mobile-title mdl-layout-title">-->
-                <!--<img class="android-logo-image" src="images/android-logo.png">-->
-              <!--</span>-->
-          <!--<button class="android-more-button mdl-button mdl-js-button mdl-button&#45;&#45;icon mdl-js-ripple-effect"-->
-                  <!--id="more-button">-->
-            <!--<i class="material-icons">more_vert</i>-->
-          <!--</button>-->
-          <!--<ul class="mdl-menu mdl-js-menu mdl-menu&#45;&#45;bottom-right mdl-js-ripple-effect" for="more-button">-->
-            <!--<li class="mdl-menu__item">5.0 Lollipop</li>-->
-            <!--<li class="mdl-menu__item">4.4 KitKat</li>-->
-            <!--<li disabled class="mdl-menu__item">4.3 Jelly Bean</li>-->
-            <!--<li class="mdl-menu__item">Android History</li>-->
-          <!--</ul>-->
-        <!--</div>-->
-      <!--</div>-->
-
-      <!--<div class="android-drawer mdl-layout__drawer">-->
-            <!--<span class="mdl-layout-title">-->
-              <!--<img class="android-logo-image" src="images/android-logo-white.png">-->
-            <!--</span>-->
-        <!--<nav class="mdl-navigation">-->
-          <!--<a class="mdl-navigation__link" href="">Phones</a>-->
-          <!--<a class="mdl-navigation__link" href="">Tablets</a>-->
-          <!--<a class="mdl-navigation__link" href="">Wear</a>-->
-          <!--<a class="mdl-navigation__link" href="">TV</a>-->
-          <!--<a class="mdl-navigation__link" href="">Auto</a>-->
-          <!--<a class="mdl-navigation__link" href="">One</a>-->
-          <!--<a class="mdl-navigation__link" href="">Play</a>-->
-          <!--<div class="android-drawer-separator"></div>-->
-          <!--<span class="mdl-navigation__link" href="">Versions</span>-->
-          <!--<a class="mdl-navigation__link" href="">Lollipop 5.0</a>-->
-          <!--<a class="mdl-navigation__link" href="">KitKat 4.4</a>-->
-          <!--<a class="mdl-navigation__link" href="">Jelly Bean 4.3</a>-->
-          <!--<a class="mdl-navigation__link" href="">Android history</a>-->
-          <!--<div class="android-drawer-separator"></div>-->
-          <!--<span class="mdl-navigation__link" href="">Resources</span>-->
-          <!--<a class="mdl-navigation__link" href="">Official blog</a>-->
-          <!--<a class="mdl-navigation__link" href="">Android on Google+</a>-->
-          <!--<a class="mdl-navigation__link" href="">Android on Twitter</a>-->
-          <!--<div class="android-drawer-separator"></div>-->
-          <!--<span class="mdl-navigation__link" href="">For developers</span>-->
-          <!--<a class="mdl-navigation__link" href="">App developer resources</a>-->
-          <!--<a class="mdl-navigation__link" href="">Android Open Source Project</a>-->
-          <!--<a class="mdl-navigation__link" href="">Android SDK</a>-->
-        <!--</nav>-->
-      <!--</div>-->
-
-      <div class="main-content mdl-layout__content">
-        <a name="top"></a>
-        <div id="welcome-back" class="background starry-night"></div>
-        <div id="power-back" class="background suns-shine"></div>
-        <canvas id="main-canvas"></canvas>
-        <div id="content-container">
-          <section id="welcome" class="mdl-typography--text-center">
-            <div class="logo-font android-slogan">be together. not the same.</div>
-            <div class="logo-font android-sub-slogan">welcome to android... be yourself. do your thing. see what's going on.
-            </div>
-          </section>
-          <section id="power" class="mdl-typography--text-center">
-            <div class="logo-font android-slogan">This is the dev you're looking for</div>
-          </section>
-          <section id="contact-me" class="mdl-typography--text-center">
-            <div class="logo-font android-slogan">Don't wait... contact me today</div>
-            <div class="logo-font android-slogan">Start over</div>
-          </section>
-        </div>
-
-
-        <!--<div class="android-screen-section mdl-typography&#45;&#45;text-center">-->
-          <!--<a name="screens"></a>-->
-          <!--<div class="mdl-typography&#45;&#45;display-1-color-contrast">Powering screens of all sizes</div>-->
-          <!--<div class="android-screens">-->
-            <!--<div class="android-wear android-screen">-->
-              <!--<a class="android-image-link" href="">-->
-                <!--<img class="android-screen-image" src="images/wear-silver-on.png">-->
-                <!--<img class="android-screen-image" src="images/wear-black-on.png">-->
-              <!--</a>-->
-              <!--<a class="android-link mdl-typography&#45;&#45;font-regular mdl-typography&#45;&#45;text-uppercase" href="">Android Wear</a>-->
-            <!--</div>-->
-            <!--<div class="android-phone android-screen">-->
-              <!--<a class="android-image-link" href="">-->
-                <!--<img class="android-screen-image" src="images/nexus6-on.jpg">-->
-              <!--</a>-->
-              <!--<a class="android-link mdl-typography&#45;&#45;font-regular mdl-typography&#45;&#45;text-uppercase" href="">Phones</a>-->
-            <!--</div>-->
-            <!--<div class="android-tablet android-screen">-->
-              <!--<a class="android-image-link" href="">-->
-                <!--<img class="android-screen-image" src="images/nexus9-on.jpg">-->
-              <!--</a>-->
-              <!--<a class="android-link mdl-typography&#45;&#45;font-regular mdl-typography&#45;&#45;text-uppercase" href="">Tablets</a>-->
-            <!--</div>-->
-            <!--<div class="android-tv android-screen">-->
-              <!--<a class="android-image-link" href="">-->
-                <!--<img class="android-screen-image" src="images/tv-on.jpg">-->
-              <!--</a>-->
-              <!--<a class="android-link mdl-typography&#45;&#45;font-regular mdl-typography&#45;&#45;text-uppercase" href="">Android TV</a>-->
-            <!--</div>-->
-            <!--<div class="android-auto android-screen">-->
-              <!--<a class="android-image-link" href="">-->
-                <!--<img class="android-screen-image" src="images/auto-on.jpg">-->
-              <!--</a>-->
-              <!--<a class="android-link mdl-typography&#45;&#45;font-regular mdl-typography&#45;&#45;text-uppercase mdl-typography&#45;&#45;text-left"-->
-                 <!--href="">Coming Soon: Android Auto</a>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-        <!--<div class="android-wear-section">-->
-          <!--<div class="android-wear-band">-->
-            <!--<div class="android-wear-band-text">-->
-              <!--<div class="mdl-typography&#45;&#45;display-2 mdl-typography&#45;&#45;font-thin">The best of Google built in</div>-->
-              <!--<p class="mdl-typography&#45;&#45;headline mdl-typography&#45;&#45;font-thin">-->
-                <!--Android works perfectly with your favourite apps like Google Maps,-->
-                <!--Calendar and YouTube.-->
-              <!--</p>-->
-              <!--<p>-->
-                <!--<a class="mdl-typography&#45;&#45;font-regular mdl-typography&#45;&#45;text-uppercase android-alt-link" href="">-->
-                  <!--See what's new in the Play Store&nbsp;<i class="material-icons">chevron_right</i>-->
-                <!--</a>-->
-              <!--</p>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-        <!--<div class="android-customized-section">-->
-          <!--<div class="android-customized-section-text">-->
-            <!--<div class="mdl-typography&#45;&#45;font-light mdl-typography&#45;&#45;display-1-color-contrast">Customised by you, for you-->
-            <!--</div>-->
-            <!--<p class="mdl-typography&#45;&#45;font-light">-->
-              <!--Put the stuff that you care about right on your home screen: the latest news, the weather or a stream of your-->
-              <!--recent photos.-->
-              <!--<br>-->
-              <!--<a href="" class="android-link mdl-typography&#45;&#45;font-light">Customise your phone</a>-->
-            <!--</p>-->
-          <!--</div>-->
-          <!--<div class="android-customized-section-image"></div>-->
-        <!--</div>-->
-        <!--<div class="android-more-section">-->
-          <!--<div class="android-section-title mdl-typography&#45;&#45;display-1-color-contrast">More from Android</div>-->
-          <!--<div class="android-card-container mdl-grid">-->
-            <!--<div class="mdl-cell mdl-cell&#45;&#45;3-col mdl-cell&#45;&#45;4-col-tablet mdl-cell&#45;&#45;4-col-phone mdl-card mdl-shadow&#45;&#45;3dp">-->
-              <!--<div class="mdl-card__media">-->
-                <!--<img src="images/more-from-1.png">-->
-              <!--</div>-->
-              <!--<div class="mdl-card__title">-->
-                <!--<h4 class="mdl-card__title-text">Get going on Android</h4>-->
-              <!--</div>-->
-              <!--<div class="mdl-card__supporting-text">-->
-                <!--<span class="mdl-typography&#45;&#45;font-light mdl-typography&#45;&#45;subhead">Four tips to make your switch to Android quick and easy</span>-->
-              <!--</div>-->
-              <!--<div class="mdl-card__actions">-->
-                <!--<a class="android-link mdl-button mdl-js-button mdl-typography&#45;&#45;text-uppercase" href="">-->
-                  <!--Make the switch-->
-                  <!--<i class="material-icons">chevron_right</i>-->
-                <!--</a>-->
-              <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="mdl-cell mdl-cell&#45;&#45;3-col mdl-cell&#45;&#45;4-col-tablet mdl-cell&#45;&#45;4-col-phone mdl-card mdl-shadow&#45;&#45;3dp">-->
-              <!--<div class="mdl-card__media">-->
-                <!--<img src="images/more-from-4.png">-->
-              <!--</div>-->
-              <!--<div class="mdl-card__title">-->
-                <!--<h4 class="mdl-card__title-text">Create your own Android character</h4>-->
-              <!--</div>-->
-              <!--<div class="mdl-card__supporting-text">-->
-                <!--<span class="mdl-typography&#45;&#45;font-light mdl-typography&#45;&#45;subhead">Turn the little green Android mascot into you, your friends, anyone!</span>-->
-              <!--</div>-->
-              <!--<div class="mdl-card__actions">-->
-                <!--<a class="android-link mdl-button mdl-js-button mdl-typography&#45;&#45;text-uppercase" href="">-->
-                  <!--androidify.com-->
-                  <!--<i class="material-icons">chevron_right</i>-->
-                <!--</a>-->
-              <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="mdl-cell mdl-cell&#45;&#45;3-col mdl-cell&#45;&#45;4-col-tablet mdl-cell&#45;&#45;4-col-phone mdl-card mdl-shadow&#45;&#45;3dp">-->
-              <!--<div class="mdl-card__media">-->
-                <!--<img src="images/more-from-2.png">-->
-              <!--</div>-->
-              <!--<div class="mdl-card__title">-->
-                <!--<h4 class="mdl-card__title-text">Get a clean customisable home screen</h4>-->
-              <!--</div>-->
-              <!--<div class="mdl-card__supporting-text">-->
-                <!--<span class="mdl-typography&#45;&#45;font-light mdl-typography&#45;&#45;subhead">A clean, simple, customisable home screen that comes with the power of Google Now: Traffic alerts, weather and much more, just a swipe away.</span>-->
-              <!--</div>-->
-              <!--<div class="mdl-card__actions">-->
-                <!--<a class="android-link mdl-button mdl-js-button mdl-typography&#45;&#45;text-uppercase" href="">-->
-                  <!--Download now-->
-                  <!--<i class="material-icons">chevron_right</i>-->
-                <!--</a>-->
-              <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="mdl-cell mdl-cell&#45;&#45;3-col mdl-cell&#45;&#45;4-col-tablet mdl-cell&#45;&#45;4-col-phone mdl-card mdl-shadow&#45;&#45;3dp">-->
-              <!--<div class="mdl-card__media">-->
-                <!--<img src="images/more-from-3.png">-->
-              <!--</div>-->
-              <!--<div class="mdl-card__title">-->
-                <!--<h4 class="mdl-card__title-text">Millions to choose from</h4>-->
-              <!--</div>-->
-              <!--<div class="mdl-card__supporting-text">-->
-                <!--<span class="mdl-typography&#45;&#45;font-light mdl-typography&#45;&#45;subhead">Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.</span>-->
-              <!--</div>-->
-              <!--<div class="mdl-card__actions">-->
-                <!--<a class="android-link mdl-button mdl-js-button mdl-typography&#45;&#45;text-uppercase" href="">-->
-                  <!--Find apps-->
-                  <!--<i class="material-icons">chevron_right</i>-->
-                <!--</a>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-
-        <!--<footer class="android-footer mdl-mega-footer">-->
-          <!--<div class="mdl-mega-footer&#45;&#45;top-section">-->
-            <!--<div class="mdl-mega-footer&#45;&#45;left-section">-->
-              <!--<button class="mdl-mega-footer&#45;&#45;social-btn"></button>-->
-              <!--&nbsp;-->
-              <!--<button class="mdl-mega-footer&#45;&#45;social-btn"></button>-->
-              <!--&nbsp;-->
-              <!--<button class="mdl-mega-footer&#45;&#45;social-btn"></button>-->
-            <!--</div>-->
-            <!--<div class="mdl-mega-footer&#45;&#45;right-section">-->
-              <!--<a class="mdl-typography&#45;&#45;font-light" href="#top">-->
-                <!--Back to Top-->
-                <!--<i class="material-icons">expand_less</i>-->
-              <!--</a>-->
-            <!--</div>-->
-          <!--</div>-->
-
-          <!--<div class="mdl-mega-footer&#45;&#45;middle-section">-->
-            <!--<p class="mdl-typography&#45;&#45;font-light">Satellite imagery: © 2014 Astrium, DigitalGlobe</p>-->
-            <!--<p class="mdl-typography&#45;&#45;font-light">Some features and devices may not be available in all areas</p>-->
-          <!--</div>-->
-
-          <!--<div class="mdl-mega-footer&#45;&#45;bottom-section">-->
-            <!--<a class="android-link android-link-menu mdl-typography&#45;&#45;font-light" id="version-dropdown">-->
-              <!--Versions-->
-              <!--<i class="material-icons">arrow_drop_up</i>-->
-            <!--</a>-->
-            <!--<ul class="mdl-menu mdl-js-menu mdl-menu&#45;&#45;top-left mdl-js-ripple-effect" for="version-dropdown">-->
-              <!--<li class="mdl-menu__item">5.0 Lollipop</li>-->
-              <!--<li class="mdl-menu__item">4.4 KitKat</li>-->
-              <!--<li class="mdl-menu__item">4.3 Jelly Bean</li>-->
-              <!--<li class="mdl-menu__item">Android History</li>-->
-            <!--</ul>-->
-            <!--<a class="android-link android-link-menu mdl-typography&#45;&#45;font-light" id="developers-dropdown">-->
-              <!--For Developers-->
-              <!--<i class="material-icons">arrow_drop_up</i>-->
-            <!--</a>-->
-            <!--<ul class="mdl-menu mdl-js-menu mdl-menu&#45;&#45;top-left mdl-js-ripple-effect" for="developers-dropdown">-->
-              <!--<li class="mdl-menu__item">App developer resources</li>-->
-              <!--<li class="mdl-menu__item">Android Open Source Project</li>-->
-              <!--<li class="mdl-menu__item">Android SDK</li>-->
-              <!--<li class="mdl-menu__item">Android for Work</li>-->
-            <!--</ul>-->
-            <!--<a class="android-link mdl-typography&#45;&#45;font-light" href="">Blog</a>-->
-            <!--<a class="android-link mdl-typography&#45;&#45;font-light" href="">Privacy Policy</a>-->
-          <!--</div>-->
-
-        <!--</footer>-->
+  <!-- Material Design icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <div id="topHeader" class="top-header mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <div class="nav-container">
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#welcome">Home</a>
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#works">Work</a>
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#contact-me">Contact</a>
+        </nav>
       </div>
     </div>
+    <span id="headerTitle" class="title mdl-layout-title">Home</span>
+  </div>
 
-    <!-- build:js(app/) ../../scripts/main.min.js -->
-    <script src="scripts/lib.min.js"></script>
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
+  <div class="mdl-layout__drawer">
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="#welcome">Home</a>
+      <a class="mdl-navigation__link" href="#works">Work</a>
+      <a class="mdl-navigation__link" href="#contact-me">Contact</a>
+      <div class="separator"></div>
+    </nav>
+  </div>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-    <script>
-      (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-          }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-          m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-      ga('create', 'UA-XXXXX-X', 'auto');
-      ga('send', 'pageview');
-    </script>
-    <!-- Built with love using Web Starter Kit -->
-  </body>
+  <div id="mainContent" class="main-content mdl-layout__content">
+    <a name="top"></a>
+    <!--<div id="wheels"></div>-->
+    <!--<div id="contactBack" class="background suns-shine"></div>-->
+    <div id="mur" class="wall"></div>
+    <div id="content-container">
+      <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+      <section id="welcome" class="welcome mdl-typography--text-center">
+        <div id="nightBack" class="background starry-night"></div>
+        <div id="dayBack" class="background sunny-day"></div>
+        <div id="textIntroduction" class="leading-text">
+          <h1>Hello, I'm Pariwat Chaichomphu</h1>
+          <h2><span id="devType">Full-stack</span> Web Developer</h2>
+          <p>I spend my days realising ideas into applications.</p>
+        </div>
+        <div id="compassContainer" class="compass-container go-next">
+          <p><i>Scroll to explore</i></p>
+          <svg id="compass" width="60" height="76" viewBox="0 0 200 246" xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path id="a" d="M100 200c55.228 0 100-44.772 100-100S155.228 0 100 0 0 44.772 0 100s44.772 100 100 100z"/>
+            <g fill="none" fill-rule="evenodd">
+              <path d="M100 246l20-30s-13.875 8.594-20 8.594c-7.208 0-20-8.594-20-8.594l20 30z" fill="#fff"/>
+              <use fill="#FFC107" xlink:href="#a"/>
+              <use fill="url(#b)" xlink:href="#a"/>
+              <path
+                d="M100 185.714c47.34 0 85.714-38.375 85.714-85.714 0-47.34-38.375-85.714-85.714-85.714-47.34 0-85.714 38.375-85.714 85.714 0 47.34 38.375 85.714 85.714 85.714z"
+                fill="#FFF"/>
+              <path
+                d="M107.705 92.33L100 43.02 92.295 92.33 43.215 100l49.08 7.67L100 156.98l7.705-49.313 49.08-7.67-49.08-7.67z"
+                fill="#C9C9C9"/>
+              <g id="hands">
+                <path d="M154.79 45.53l-49.04 60.448-11.405-11.405L154.79 45.53z" fill="#FF5A5A"/>
+                <path d="M45.53 154.47l60.448-49.043-11.405-11.405L45.53 154.47z" fill="#9BF9E1"/>
+              </g>
+              <circle fill="#FFF" cx="100.714" cy="100.714" r="3.571"/>
+            </g>
+          </svg>
+        </div>
+        <div class="world">
+          <canvas id="main-canvas"></canvas>
+          <img class="petite-village" src="images/village.svg">
+        </div>
+      </section>
+      <section id="works" class="works mdl-typography--text-center">
+        <div id="textWork" class="leading-text">
+          <h1>Past Work</h1>
+          <p>Some of recent contributed projects.</p>
+          <p>Also checkout my résumé for more in-depth details.</p>
+        </div>
+        <div id="workContent" class="work-content">
+          <div class="card-container">
+            <div id="leftOverlay" class="left overlay"><i class="material-icons">chevron_left</i></div>
+            <div id="rightOverlay" class="right overlay"><i class="material-icons">chevron_right</i></div>
+            <ul id="overlayObject">
+              <li class="mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title front">
+                  <h2 class="mdl-card__title-text">Tulip</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  Website for a US company specialised in subscription based oral care products.
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <i id="tt1" class="tooltip-icon devicon-javascript-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt1">
+                    Javascript
+                  </div>
+                  <i id="tt2" class="tooltip-icon devicon-html5-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt2">
+                    HTML
+                  </div>
+                  <i id="tt3" class="tooltip-icon devicon-css3-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt3">
+                    CSS
+                  </div>
+                  <i id="tt4" class="tooltip-icon devicon-bootstrap-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt4">
+                    Bootstrap
+                  </div>
+                  <i id="tt5" class="tooltip-icon devicon-sass-original colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt5">
+                    Sass
+                  </div>
+                  <i id="tt16" class="devicon-jquery-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt16">
+                    jQuery
+                  </div>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <a href="http://www.tulipclean.com" target="_blank" rel="noreferrer">
+                    Visit
+                  </a>
+                </div>
+              </li>
+              <li class="mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title full">
+                  <h2 class="mdl-card__title-text">Workhiro</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  Automate companies hiring process with this easy to use,
+                  feature-packed, beautiful web (and mobile) application.
+                  Suited for any company size.
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <i id="tt6" class="tooltip-icon devicon-javascript-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt6">
+                    Javascript (ECMAScript 2015)
+                  </div>
+                  <i id="tt7" class="tooltip-icon devicon-ruby-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt7">
+                    Ruby
+                  </div>
+                  <i id="tt8" class="tooltip-icon devicon-html5-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt8">
+                    HTML
+                  </div>
+                  <i id="tt9" class="tooltip-icon devicon-css3-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt9">
+                    CSS
+                  </div>
+                  <img id="tt10" src="images/ember-js-icon.png" class="tooltip-icon">
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt10">
+                    EmberJS
+                  </div>
+                  <i id="tt11" class="tooltip-icon devicon-rails-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt11">
+                    Rails
+                  </div>
+                  <i id="tt12" class="tooltip-icon devicon-bootstrap-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt12">
+                    Bootstrap
+                  </div>
+                  <i id="tt13" class="tooltip-icon devicon-sass-original colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt13">
+                    Sass
+                  </div>
+                  <i id="tt14" class="tooltip-icon devicon-postgresql-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt14">
+                    PostgreSQL
+                  </div>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <a href="https://www.workhiro.com" target="_blank" rel="noreferrer">
+                    Visit
+                  </a>
+                </div>
+              </li>
+              <li class="mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title full">
+                  <h2 class="mdl-card__title-text">Kyklo</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  Innovative Business-to-business e-commerce for electromechanical parts.
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <i id="tt31" class="tooltip-icon devicon-ruby-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt31">
+                    Ruby
+                  </div>
+                  <i id="tt32" class="tooltip-icon devicon-html5-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt32">
+                    HTML
+                  </div>
+                  <i id="tt33" class="tooltip-icon devicon-css3-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt33">
+                    CSS
+                  </div>
+                  <i id="tt34" class="tooltip-icon devicon-rails-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt34">
+                    Rails
+                  </div>
+                  <i id="tt35" class="tooltip-icon devicon-bootstrap-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt35">
+                    Bootstrap
+                  </div>
+                  <i id="tt36" class="tooltip-icon devicon-sass-original colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt36">
+                    Sass
+                  </div>
+                  <i id="tt37" class="tooltip-icon devicon-postgresql-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt37">
+                    PostgreSQL
+                  </div>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <a href="http://www.kyklo.co" target="_blank" rel="noreferrer">
+                    Visit
+                  </a>
+                </div>
+              </li>
+              <li class="mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title full">
+                  <h2 class="mdl-card__title-text">Skuugo</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  Skuugo makes school easier for teachers and more fun for students.
+                  Keep track of learning progress of each individual students for teacher.
+                  And motivate students to engage in school activities by gamification.
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <i id="tt41" class="tooltip-icon devicon-javascript-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt41">
+                    Javascript
+                  </div>
+                  <i id="tt42" class="tooltip-icon devicon-html5-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt42">
+                    HTML
+                  </div>
+                  <i id="tt43" class="tooltip-icon devicon-css3-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt43">
+                    CSS
+                  </div>
+                  <i id="tt44" class="tooltip-icon devicon-angularjs-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt44">
+                    AngularJS
+                  </div>
+                  <span id="tt45" class="tooltip-icon">E</span>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt45">
+                    ExpressJS
+                  </div>
+                  <i id="tt46" class="tooltip-icon devicon-bootstrap-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt46">
+                    Bootstrap
+                  </div>
+                  <i id="tt47" class="tooltip-icon devicon-mongodb-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt47">
+                    MongoDB
+                  </div>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <a href="http://www.skuugo.com" target="_blank" rel="noreferrer">
+                    Visit
+                  </a>
+                </div>
+              </li>
+              <li class="mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title front">
+                  <h2 class="mdl-card__title-text">DNR</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  Homepage for an Australian logistic company
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <i id="tt51" class="tooltip-icon devicon-html5-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt51">
+                    HTML
+                  </div>
+                  <i id="tt52" class="tooltip-icon devicon-css3-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt52">
+                    CSS
+                  </div>
+                  <i id="t53" class="tooltip-icon devicon-bootstrap-plain colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="t53">
+                    Bootstrap
+                  </div>
+                  <i id="tt54" class="tooltip-icon devicon-sass-original colored"></i>
+                  <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="tt54">
+                    Sass
+                  </div>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <a href="http://www.dnrlogistics.com.au" target="_blank" rel="noreferrer">
+                    Visit
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="background-container">
+            <img class="art" src="images/art.svg">
+            <img class="epee" src="images/longclaw.svg">
+            <img class="portrait" src="images/portrait.svg">
+            <img class="shelf" src="images/shelf.svg">
+            <svg id="miniMe" class="mini-me" viewBox="0 0 197 280" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <g fill-rule="nonzero" stroke="none" stroke-width="1" fill="none">
+                <path fill="#F8AA6A"
+                      d="M49.5441895 142.405419L87.580532 142.405419 93.3138473 182.486414 44.1824288 182.486414"/>
+                <path
+                  d="M10.8466922,197.63717 C14.882832,175.915568 35.4428759,162.96225 56.9693358,167.970601 C56.9693358,167.970601 57.679606,169.572788 68.7481416,169.572788 C79.1657398,169.572788 81.4108061,167.76895 81.4108061,167.76895 C102.86823,162.54311 123.384732,175.935988 127.238672,197.699589 L134.580004,239.156856 C138.432612,260.912932 123.648239,278.549716 101.562021,278.549716 L35.8058962,278.549716 C13.7179603,278.549716 -0.91511313,260.936579 3.12022788,239.219275 L10.8466922,197.63717 Z"
+                  fill="#01579B"/>
+                <path
+                  d="M8.1955205,209 L44.1490203,214.020104 L37.639408,248.069745 L87.8888032,248.069744 L110.876082,261.395466 C127.588162,271.083456 125.476451,278.937124 106.168466,278.937124 L30.2617209,278.937125 C10.9496962,278.937125 -1.86656301,263.545856 1.63620246,244.557607 L8.1955205,209 Z"
+                  fill="#F9BF91"/>
+                <path
+                  d="M0.62243201,42.4782054 C1.12238848,21.5735396 23.4442466,16.4372798 30.8962652,37.6735654 C38.3482839,58.909851 27.6954283,119.888054 27.6954283,119.888054 C27.6954283,119.888054 0.12247554,63.3828712 0.62243201,42.4782054 L0.62243201,42.4782054 Z"
+                  fill="#000"/>
+                <path
+                  d="M11.5205351,78.5602354 C12.4695814,69.0966055 22.1673022,67.6993541 24.5969028,77.6458467 C27.0265033,87.5923394 26.4135307,103.624837 26.4135307,103.624837 C26.4135307,103.624837 10.5714887,88.0238654 11.5205351,78.5602354 Z"
+                  fill="#FFC99E"/>
+                <path
+                  d="M123.771929,86.1419267 C124.402472,89.2495333 124.732696,92.4590646 124.732696,95.7420426 C124.732696,124.421208 101.079815,152.714151 71.9025078,152.714151 C42.7252003,152.714151 19.0723191,123.526728 19.0723191,95.7420426 C19.0723191,91.6478889 19.5858912,87.6679612 20.5550341,83.8574922 C20.5619796,83.6609001 20.5734315,83.4631785 20.5894782,83.2644239 L23.7822246,43.7190195 C24.3596168,36.5674322 30.6538221,30.7699252 37.8269851,30.7699253 L104.965386,30.7699254 C112.144701,30.7699254 118.603986,36.5488996 119.395019,43.6994734 L123.774061,83.2839702 C123.882703,84.2660425 123.878578,85.2225417 123.771929,86.1419267 Z"
+                  fill="#FDC394"/>
+                <rect fill="#F8AA6A" x="67.0286529" y="86.4960253" width="15.9250915" height="30.7134363"
+                      rx="7.96254575"/>
+                <path
+                  d="M10.3773585,20.7968585 C16.1086153,20.7968585 20.754717,16.1413232 20.754717,10.3984293 C20.754717,4.65553536 16.1086153,0 10.3773585,0 C4.64610165,0 0,4.65553536 0,10.3984293 C0,16.1413232 4.64610165,20.7968585 10.3773585,20.7968585 Z"
+                  fill="#FFF" transform="translate(40.813 72.066)"/>
+                <path
+                  d="M10.7704403,15.5188679 C13.375557,15.5188679 15.4874214,13.4027155 15.4874214,10.7923092 C15.4874214,8.18190284 13.375557,6.06575041 10.7704403,6.06575041 C8.16532351,6.06575041 6.05345912,8.18190284 6.05345912,10.7923092 C6.05345912,13.4027155 8.16532351,15.5188679 10.7704403,15.5188679 Z"
+                  fill="#363232" transform="translate(40.813 72.066)"/>
+                <path
+                  d="M10.3773585,20.7968585 C16.1086153,20.7968585 20.754717,16.1413232 20.754717,10.3984293 C20.754717,4.65553536 16.1086153,0 10.3773585,0 C4.64610165,0 0,4.65553536 0,10.3984293 C0,16.1413232 4.64610165,20.7968585 10.3773585,20.7968585 Z"
+                  fill="#FFF" transform="translate(88.455 72.585)"/>
+                <path
+                  d="M10.7006519,15.4540329 C13.3057686,15.4540329 15.417633,13.3378805 15.417633,10.7274742 C15.417633,8.11706786 13.3057686,6.00091542 10.7006519,6.00091542 C8.09553516,6.00091542 5.98367077,8.11706786 5.98367077,10.7274742 C5.98367077,13.3378805 8.09553516,15.4540329 10.7006519,15.4540329 Z"
+                  fill="#363232" transform="translate(88.455 72.585)"/>
+                <path
+                  d="M117.433167,46.0361533 C91.2495532,60.315772 50.9208821,54.0985496 36.9828086,51.4101077 C7.3720513,45.6986438 10.2612362,7.27746086 42.1379406,1.12893032 C60.2501304,-2.36463508 73.2479083,3.92369431 98.176307,13.8087621 C109.971532,18.4860219 127.984488,19.2726521 139.93539,13.8087617 C151.886292,8.34487132 152.333643,7.06898273 152.333643,7.06898273 C152.333643,7.06898273 143.616782,31.7565346 117.433167,46.0361533 Z"
+                  fill="#000"/>
+                <path
+                  d="M75.3584906,139.433454 C89.0353535,139.433454 100.122642,123.363184 100.122642,123.363184 L50.5943396,123.363184 C50.5943396,123.363184 61.6816277,139.433454 75.3584906,139.433454 Z"
+                  fill="#FFF"/>
+                <path
+                  d="M35.1556513 65.4845256C39.7280697 66.4309698 52.2195527 67.7754763 59.0071518 65.9017007 64.8442146 64.2903289 65.8101613 59.4510922 61.4429975 59.7344969 50.4706989 60.4465382 26.6511366 63.7241775 35.1556513 65.4845256L35.1556513 65.4845256zM113.608576 65.4845256C109.036157 66.4309698 96.5446744 67.7754763 89.7570753 65.9017007 83.9200125 64.2903289 82.9540657 59.4510922 87.3212295 59.7344969 98.293528 60.4465382 122.11309 63.7241775 113.608576 65.4845256L113.608576 65.4845256z"
+                  fill="#514646"/>
+                <g>
+                  <path
+                    d="M10.6445296,8.20165711 C11.4965628,3.86706163 15.7705176,0.353177716 20.192853,0.353177714 L115.187537,0.353177683 C119.608898,0.353177681 122.365141,3.83847197 121.343867,8.13742845 L109.743138,56.9696026 C108.721824,61.2687256 104.319235,64.7538534 99.9035151,64.7538535 L7.51867305,64.7538549 C3.10571291,64.7538549 0.217892977,61.2456602 1.07104448,56.9053756 L10.6445296,8.20165711 Z"
+                    fill="#D8D8D8" transform="translate(75.358 215)"/>
+                  <g id="manglogo" fill="#FFF">
+                    <path
+                      d="M3.44577739 27.0306026C10.3773583 29.2440999 19.8501535 21.1209065 19.8501535 15.4607432 19.8501535 9.80057987 18.0846245 7.46657202 12.3668933 7.46657202 6.64916197 7.46657202 3.4457774 11.6455026 3.4457774 17.3056659 3.4457774 22.9658292-3.48580351 24.8171053 3.44577739 27.0306026zM14.9227729 4.92909629C14.9227729 4.92909629 17.999354 6.65736628 20.5852011 5.67662691 23.1710481 4.69588755 24.2869535 1.37752488 24.2869535 1.37752488 24.2869535 1.37752488 21.2103724-.3507451 18.6245254.629994265 16.0386783 1.61073363 14.9227729 4.92909629 14.9227729 4.92909629L14.9227729 4.92909629z"
+                      transform="translate(124.887 232.02)"/>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </section>
+      <section id="contact-me" class="contact-me mdl-typography--text-center">
+        <div class="leading-text">
+          <h1>Before You Go</h1>
+          <p>If you need to get a message to me or see what I've been doing.
+            Here're just some ways you can reach me.</p>
+        </div>
+        <div class="social">
+          <a href="mailto:cpariwat@me.com"
+             class="email-btn mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+            <i class="material-icons icon">email</i>cpariwat@me.com
+          </a>
+          <a href="https://www.linkedin.com/in/pariwat/" target="_blank"
+             class="linkedin-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+            <img class="icon" src="images/linkedin-icon.png">Connect Me
+          </a>
+        </div>
+        <div id="pocketWatchWrapper" class="pocket-watch-wrapper">
+          <svg id="pocketWatch" class="pocket-watch" viewBox="0 0 283 1076" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="a">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"/>
+            <feMerge>
+              <feMergeNode in="shadowMatrixOuter1"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <path d="M140,339 C217.319865,339 280,276.319865 280,199 C280,121.680135 217.319865,59 140,59 C62.680135,59 0,121.680135 0,199 C0,276.319865 62.680135,339 140,339 Z" id="c"/>
+          <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="b">
+            <feOffset dx="3" dy="7" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.305140399 0" type="matrix" in="shadowOffsetOuter1"/>
+          </filter>
+          <circle id="d" cx="140" cy="199" r="120"/>
+          <!--<filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="e">-->
+            <!--<feOffset dx="3" dy="7" in="SourceAlpha" result="shadowOffsetInner1"/>-->
+            <!--<feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"/>-->
+            <!--<feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.174818841 0" type="matrix" in="shadowInnerInner1"/>-->
+          <!--</filter>-->
+        </defs>
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g transform="translate(0 730)">
+            <g filter="url(#a)" transform="translate(101)" fill="#FFB200">
+              <path d="M31.5319149 41.7857143H44.468085099999996V70.5714286H31.5319149z"/>
+              <path d="M38,42.7142857 C0,42.7142857 0,33.1523672 0,21.3571429 C0,9.56191856 17.0131795,0 38,0 C58.9868205,0 76,9.56191856 76,21.3571429 C76,33.1523672 76,42.7142857 38,42.7142857 Z M38,36.2142857 C63.8723404,36.2142857 63.8723404,29.7703841 63.8723404,21.8214286 C63.8723404,13.8724731 52.2888991,7.42857143 38,7.42857143 C23.7111009,7.42857143 12.1276596,13.8724731 12.1276596,21.8214286 C12.1276596,29.7703841 12.1276596,36.2142857 38,36.2142857 Z"/>
+            </g>
+            <use fill="#000" fill-opacity="1" filter="url(#b)" xlink:href="#c"/>
+            <use fill="#FFC107" fill-rule="evenodd" xlink:href="#c"/>
+            <use fill="#FFF" fill-rule="evenodd" xlink:href="#d"/>
+            <use fill="#000" fill-opacity="1" filter="url(#e)" xlink:href="#d"/>
+            <circle cx="145" cy="199" r="110"/>
+            <ellipse fill="#000" cx="139" cy="202.5" rx="7.68085106" ry="7.89285714"/>
+            <path fill="#000" d="M138 285H145V310H138z"/>
+            <path fill="#000" transform="rotate(150 190.5 283.5)" d="M187 271H194V296H187z"/>
+            <path fill="#000" transform="rotate(150 87.5 117.5)" d="M84 105H91V130H84z"/>
+            <path fill="#000" d="M136 90H143V115H136z"/>
+            <path fill="#000" transform="rotate(120 224.5 249.5)" d="M221 237H228V262H221z"/>
+            <path fill="#000" transform="rotate(120 53.5 154.5)" d="M50 142H57V167H50z"/>
+            <path fill="#000" transform="rotate(-90 42 199.5)" d="M39 187H45V212H39z"/>
+            <path fill="#000" transform="rotate(-90 237.5 196.5)" d="M234 184H241V209H234z"/>
+            <path fill="#000" transform="rotate(-90 237.5 196.5)" d="M234 184H241V209H234z"/>
+            <path fill="#000" transform="rotate(30 189.5 115.5)" d="M186 103H193V128H186z"/>
+            <path fill="#000" transform="rotate(30 94.5 286.5)" d="M91 274H98V299H91z"/>
+            <path fill="#000" transform="rotate(60 223.5 148.5)" d="M220 136H227V161H220z"/>
+            <path fill="#000" transform="rotate(60 55.075 249.5)" d="M51.5753175 237H58.5753175V262H51.5753175z"/>
+          </g>
+          <g fill="#FFCB53">
+            <g transform="translate(132 700)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="3" y="22.2727273" width="8" height="18.7272727" rx="4"/>
+            </g>
+            <g transform="translate(132 670)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 641)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 612)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 583)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 554)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 525)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 496)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 467)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 438)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 408)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 379)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 350)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 320)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 291)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 262)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 233)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 204)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 175)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 146)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 117)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 88)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 58)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132 29)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+            <g transform="translate(132)">
+              <path d="M0,7.49288008 C0,3.35467668 3.36629279,0 7.5,0 C11.6421356,0 15,3.35405694 15,7.49288008 L15,22.5071199 C15,26.6453233 11.6337072,30 7.5,30 C3.35786438,30 0,26.6459431 0,22.5071199 L0,7.49288008 Z M3,7.50201468 L3,23.0434399 C3,25.536797 5.01471863,27.5454545 7.5,27.5454545 C9.98022433,27.5454545 12,25.5298339 12,23.0434399 L12,7.50201468 C12,5.00865756 9.98528137,3 7.5,3 C5.01977567,3 3,5.01562063 3,7.50201468 Z"/>
+              <rect x="5.1" y="24.2727273" width="4.5" height="12" rx="2.25"/>
+            </g>
+          </g>
+          <path id="shortHand" d="M143,880.279131 L143,931 L136,931 L136,880.279131 C133.621098,879.231216 132,877.14837 132,874.75 C132,872.340438 133.636264,870.24935 136.033354,869.206269 L139.5,856 L142.966646,869.206269 C145.363736,870.24935 147,872.340438 147,874.75 C147,877.14837 145.378902,879.231216 143.000001,880.279127 Z" fill="#000"/>
+          <path id="longHand" d="M144,870.134957 L144,931 L137,931 L137,870.134957 C134.621098,868.877459 133,866.378044 133,863.5 C133,860.608525 134.636264,858.09922 137.033354,856.847523 L140.5,841 L143.966646,856.847523 C146.363736,858.09922 148,860.608525 148,863.5 C148,866.378044 146.378902,868.877459 144.000001,870.134953 Z" fill="#000"/>
+        </g>
+      </svg>
+          <p id="startOver"><b>Start over?</b></p>
+        </div>
+        <div class="ob2-container">
+          <p id="thoughtBubble" class="thought-bubble"></p>
+          <svg id="ob2" class="ob2" viewBox="0 0 469 600" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(1)" fill="none" fill-rule="evenodd">
+              <path
+                d="M53.4932433 412.867533c6.1990166-21.207926 29.1333677-38.400347 51.2174527-38.400347h260.650117c22.087601 0 44.798861 17.251786 50.728595 38.538605l49.562824 177.922791c5.929028 21.284283-7.18182 38.538604-29.259416 38.538604H30.1766504c-22.08855683 0-34.97044032-17.189458-28.77055767-38.400347L53.4932433 412.867533z"
+                fill="#432C22"/>
+              <path
+                d="M60 374.036133C86.8964582 393.290853 199.247781 390 233.5 390c55.798555 0 155.761706 21.844882 187.500011-24.151276C443.76507 332.856879 407 239.982453 407 195 407 87.3044738 329.321404 0 233.5 0S60 87.3044738 60 195c0 69.198796-48.3470288 144.425311 0 179.036133z"
+                fill="#432C22"/>
+              <path
+                d="M136.974541 154.904701v119.728403c0 21.277807 78.216681 74.834082 97.046075 74.834082 18.829394 0 95.928469-53.557238 95.928469-74.834082V159.740031c.01694-.646242.025456-1.294292.025456-1.944069s-.008516-1.297826-.025456-1.944069v-.947192c0-2.264604-.202837-4.483553-.591963-6.640913C323.908406 106.472972 283.064424 74 233.487269 74c-49.220045 0-89.832275 32.006843-95.74661 73.362166-.502574 2.439144-.766118 4.961192-.766118 7.542535z"
+                fill="#FFAA65"/>
+              <path
+                d="M232.996661 73c38.349586 0 71.474332 19.4252043 87.037031 47.562575 0 0-34.266201-3.693398-59.133694 12.281537-24.867493 15.974936-39.889912 37.34792-39.889912 37.34792s-1.020693-25.444933-19.54956-37.34792c-18.528868-11.902986-54.474198-12.281536-54.474198-12.281536C162.551824 92.4317172 194.65256 73 232.996661 73zM181.787445 291.236993C195.249037 274.36227 213.484784 264 233.56335 264c20.060368 0 38.281254 10.343494 51.73929 27.191124C303.513063 278.25641 318.943861 259.320942 330 238.049002v38.364855c0 20.77054-77.109245 73.053329-95.941123 73.053329-18.831878 0-97.058877-52.281849-97.058877-73.053329V238c11.070973 21.317024 26.534916 40.291277 44.787445 53.236993z"
+                fill="#FFD"/>
+              <rect fill="#F29950" x="221" y="198" width="26" height="77" rx="13"/>
+              <path
+                d="M173 212c13.8071187 0 25-11.1928813 25-25s-11.1928813-25-25-25-25 11.1928813-25 25 11.1928813 25 25 25z"
+                fill="#FFF"/>
+              <path
+                d="M174.0416667 199.5C180.3699294 199.5 185.5 194.3699294 185.5 188.0416667c0-6.3282628-5.1300706-11.4583334-11.4583333-11.4583334-6.3282628 0-11.4583334 5.1300706-11.4583334 11.4583334 0 6.3282627 5.1300706 11.4583333 11.4583334 11.4583333z"
+                fill="#5C5C5C"/>
+              <path
+                d="M294 214c13.8071187 0 25-11.1928813 25-25s-11.1928813-25-25-25-25 11.1928813-25 25 11.1928813 25 25 25z"
+                fill="#FFF"/>
+              <path
+                d="M295.0416667 201.5C301.3699294 201.5 306.5 196.3699294 306.5 190.0416667c0-6.3282628-5.1300706-11.4583334-11.4583333-11.4583334-6.3282628 0-11.4583334 5.1300706-11.4583334 11.4583334 0 6.3282627 5.1300706 11.4583333 11.4583334 11.4583333z"
+                fill="#5C5C5C"/>
+              <rect id="bouche" fill="#FFAA65" x="213" y="294" width="41" height="14" rx="7"/>
+              <g id="hand" transform="translate(266.843 374.15)" fill="#FFAA65">
+                <rect x="44.5487465" y="97.9671861" width="61" height="161.032814" rx="30.5"/>
+                <path
+                  d="M100.188063 63.6746082l4.523997-43.0429526c.461954-4.395205-2.726591-8.3350577-7.1221172-8.7970461l-2.9783087-.3130328c-4.4046264-.4629449-8.333401 2.7275521-8.7954903 7.1240381l-4.710937 44.8215713h-3.5287642V8.47157705c0-4.41941496-3.5829053-8.00439096-8.002643-8.00439096h-2.994714c-4.4288883 0-8.002643 3.5836879-8.002643 8.00439095V63.4671861h-2.0092139c-.5083101 0-1.01241.0180876-1.5116913.0536548l-1.5491633-44.362232c-.1542354-4.4167227-3.8600719-7.8744733-8.2771172-7.7202267l-2.9928897.1045141c-4.4261904.1545659-7.8726991 3.860793-7.7184188 8.2788031l2.0357546 58.2963842c-.6347913 2.0037663-.9772604 4.1376473-.9772604 6.3515338v4.8382671L17.565803 61.5739315c-2.4069859-3.7064333-7.364381-4.761657-11.07108494-2.3544954l-2.51157848 1.6310382c-3.7143783 2.4121454-4.75976483 7.3640853-2.3520774 11.0715988L34.8492604 123.073613c.3968923.61116.8631284 1.150236 1.381667 1.613591 2.321824 9.072731 10.5521469 15.779982 20.3491051 15.779982h30.0232631c11.6053497 0 22.2892034-9.317822 23.8750884-20.811938l4.880972-35.3761239c.26597-1.9276883.259583-3.7936787.010108-5.5645275l10.019169-37.3920512c1.143829-4.268827-1.387988-8.6586658-5.655717-9.8022003-4.259045-1.1412076-8.654934 1.3910243-9.799096 5.6610956l-7.240402 27.0215477c-.80818-.2276399-1.644309-.4049224-2.505355-.5283802z"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<!-- TWO.js seems not to be compatible with browserify :( -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/two.js/0.6.0/two.min.js"></script>
+<script src="scripts/lib.min.js"></script>
+<script src="scripts/main.min.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-72370092-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- Built with love using Web Starter Kit -->
+</body>
 </html>

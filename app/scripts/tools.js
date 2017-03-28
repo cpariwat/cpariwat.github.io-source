@@ -18,4 +18,8 @@ function shuffle(array) {
   return array;
 }
 
-export {shuffle};
+function svgToDataUrl(svgElem) {
+  return 'data:image/svg+xml;charset=utf8,' + (new XMLSerializer()).serializeToString(svgElem)
+}
+
+export {shuffle, svgToDataUrl};

@@ -1,0 +1,25 @@
+$header-color: (
+  welcome: #fff,
+  works: #c90a00,
+  contact: #6A4A3C
+);
+
+$zIndex: (
+  highest: 1000,
+  higher: 100,
+  high: 10,
+  base: 1,
+  deep: -10,
+  deeper: -100,
+  deepest: -1000
+);
+
+$header-height: 64px;
+$default-font-size: 1.8rem; // 18px
+
+// Override Material Lite
+$preferred_font: 'Playfair Display', sans-serif !default;
+$performance_font: 'Montserrat', 'Arial', sans-serif !default;
+
+$phone-gutter: 16px;
+$desktop-gutter: 40px

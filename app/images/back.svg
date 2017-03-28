@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="1068px" height="290px" viewBox="0 0 1068 290" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
-    <title>back</title>
-    <desc>Created with Sketch.</desc>
+<svg width="1189px" height="198px" viewBox="0 0 1189 198" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs></defs>
-    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Mobile-Portrait" sketch:type="MSArtboardGroup" transform="translate(-2.000000, -734.000000)" fill="#1B5E20">
-            <g id="mountains" sketch:type="MSLayerGroup" transform="translate(0.000000, 734.000000)">
-                <g id="back" sketch:type="MSShapeGroup">
-                    <polygon points="165 4 330 294 0 294 "></polygon>
-                    <polygon id="back-copy" points="575 4 740 294 410 294 "></polygon>
-                    <polygon id="back-copy-2" points="905 0 1070 290 740 290 "></polygon>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-1916.000000, -388.000000)" fill="#1B5E20">
+            <g id="mountains" transform="translate(1914.000000, 388.000000)">
+                <g id="back" transform="translate(2.881188, 0.000000)">
+                    <polygon points="122.487635 21.4737318 244.97527 197.836768 0 197.836768 "></polygon>
+                    <polygon id="back-copy" points="335.936535 45.3065745 458.42417 197.836768 213.448901 197.836768 "></polygon>
+                    <polygon id="back-copy-4" points="840.650346 74.4166895 942.23241 197.836768 739.068283 197.836768 "></polygon>
+                    <polygon id="back-copy-2" points="1064.72005 21.4737318 1187.20768 197.836768 942.23241 197.836768 "></polygon>
+                    <polygon id="back-copy-3" points="569.025471 0.364642494 739.068283 197.836768 398.982658 197.836768 "></polygon>
                 </g>
             </g>
         </g>

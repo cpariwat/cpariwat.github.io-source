@@ -1,0 +1,149 @@
+section.works {
+  color: map-get($header-color, 'works');
+  display: flex;
+  flex-direction: column;
+
+  //img, svg {
+  //  position: absolute;
+  //}
+
+  .work-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 0 (-$phone-gutter);
+    align-items: center;
+
+    @include desktop() {
+      margin: 0 (-$desktop-gutter);
+    }
+  }
+
+  .work-content .card-container {
+    height: 40vh;
+    width: 100%;
+    flex-grow: 1;
+    padding: 0;
+    margin: 0 40px;
+
+    ul {
+      display: flex;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+
+      > li {
+        a {
+          text-transform: uppercase;
+          text-decoration: none;
+          font-size: 1rem;
+        }
+
+        &:nth-child(1) {
+          .mdl-card__title {
+            background-color: unquote("rgb(#{$palette-pink-A200})");
+          }
+        }
+
+        &:nth-child(2) {
+          .mdl-card__title {
+            background-color: unquote("rgb(#{$palette-indigo-A200})");
+          }
+        }
+
+        &:nth-child(3) {
+          .mdl-card__title {
+            background-color: unquote("rgb(#{$palette-deep-purple-A200})");
+          }
+        }
+
+        &:nth-child(4) {
+          .mdl-card__title {
+            background-color: unquote("rgb(#{$palette-red-A200})");
+          }
+        }
+
+        &:nth-child(5) {
+          .mdl-card__title {
+            background-color: unquote("rgb(#{$palette-teal-500})");
+          }
+        }
+      }
+    }
+
+    .mdl-card {
+      margin-right: 1rem;
+      min-width: 80%;
+      width: 80%;
+
+      @include tablet() {
+        min-width: 30%;
+        width: 30%;
+      }
+
+      > .mdl-card__title {
+        &.front {
+          background-image: url('../../../images/tech-front.svg');
+          background-size: auto 80%;
+        }
+
+        &.full {
+          background-image: url('../../../images/tech-both.svg');
+          background-size: auto 100%;
+        }
+
+        background-position-x: center;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        background-color: #00a0b0;
+        color: #fff;
+        height: 150px;
+      }
+
+      > .mdl-card__supporting-text {
+        flex-grow: 1;
+        overflow: auto;
+      }
+    }
+  }
+
+  .work-content .background-container {
+    height: 50%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-self: stretch;
+    padding-top: 1rem;
+
+    img, svg {
+      width: auto;
+      display: inline-block;
+    }
+
+    .mini-me {
+      bottom: 0;
+      left: 10%;
+      position: absolute;
+      height: 30%;
+    }
+
+    .shelf {
+      height: 50%;
+      max-height: 300px;
+    }
+
+    .art, .portrait {
+      max-height: 120px;
+      align-self: flex-start;
+      margin-left: 1rem;
+    }
+
+    .epee {
+      height: 50%;
+      max-height: 250px;
+      align-self: center;
+    }
+  }
+}

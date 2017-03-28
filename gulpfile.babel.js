@@ -37,6 +37,7 @@ import pkg from './package.json';
 import browserify from 'browserify';
 import babelify from 'babelify';
 import source from 'vinyl-source-stream';
+var buffer = require('vinyl-buffer')
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -89,7 +90,8 @@ gulp.task('styles', () => {
   // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
     'app/styles/**/*.scss',
-    'app/styles/**/*.css'
+    'app/styles/**/*.css',
+    '!app/styles/src/**/*.css',
   ])
     .pipe($.newer('.tmp/styles'))
     .pipe($.sourcemaps.init())
@@ -119,7 +121,9 @@ let b = browserify({
 gulp.task('browserify', function() {
   return b
     .bundle()
-    .pipe(source('main.js'))
+    .pipe(source('main.min.js'))
+    .pipe(buffer()) // <----- convert from streaming to buffered vinyl file object
+    .pipe($.uglify())
     .pipe(gulp.dest('dist/scripts'))
     .pipe(gulp.dest('.tmp/scripts'))
 });
@@ -130,16 +134,16 @@ gulp.task('scripts', () =>
       './app/styles/src/mdlComponentHandler.js',
       // Base components
       './app/styles/src/button/button.js',
-      './app/styles/src/checkbox/checkbox.js',
-      './app/styles/src/icon-toggle/icon-toggle.js',
+      // './app/styles/src/checkbox/checkbox.js',
+      // './app/styles/src/icon-toggle/icon-toggle.js',
       './app/styles/src/menu/menu.js',
-      './app/styles/src/progress/progress.js',
-      './app/styles/src/radio/radio.js',
-      './app/styles/src/slider/slider.js',
-      './app/styles/src/spinner/spinner.js',
-      './app/styles/src/switch/switch.js',
+      // './app/styles/src/progress/progress.js',
+      // './app/styles/src/radio/radio.js',
+      // './app/styles/src/slider/slider.js',
+      // './app/styles/src/spinner/spinner.js',
+      // './app/styles/src/switch/switch.js',
       './app/styles/src/tabs/tabs.js',
-      './app/styles/src/textfield/textfield.js',
+      // './app/styles/src/textfield/textfield.js',
       './app/styles/src/tooltip/tooltip.js',
       // Complex components (which reuse base components)
       './app/styles/src/layout/layout.js',
@@ -147,8 +151,13 @@ gulp.task('scripts', () =>
       // And finally, the ripples
       './app/styles/src/ripple/ripple.js',
       // Other scripts,
-      './node_modules/pixi.js/dist/pixi.js',
-
+      './node_modules/jquery-1.8/jquery.min.js',
+      './node_modules/jquery.scrollto/jquery.scrollTo.min.js',
+      './app/scripts/vendor/jquery.noreferrer.js',
+      './app/scripts/vendor/hammer.min.js',
+      './app/scripts/vendor/hammer-time.min.js',
+      // './app/scripts/vendor/two.min.js',
+      './node_modules/pixi.js/dist/pixi.js'
       ])
       .pipe($.newer('.tmp/scripts'))
       .pipe($.sourcemaps.init())
@@ -166,7 +175,7 @@ gulp.task('scripts', () =>
 
 // Scan your HTML for assets & optimize them
 gulp.task('html', () => {
-  return gulp.src('app/**/*.html')
+  return gulp.src('app/*.html')
     .pipe($.useref({
       searchPath: '{.tmp,app}',
       noAssets: true

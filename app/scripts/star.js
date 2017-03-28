@@ -1,15 +1,15 @@
 import {TweenMax} from "gsap";
+
 class Star extends PIXI.Sprite {
   constructor(texture, scale) {
     super(texture);
     this.originalScale = this.scale.x = this.scale.y = scale;
     this.velocity = {x: 1, y: 1};
-    this.shineSpeed = Math.random() * (2 - 1);
     this.isFadeOut = true;
     this.isAnimating = true;
-
-    let startAt = Math.random() * (1 - 0);
-    this.infiniteShiningTween = TweenMax.to(this, 2, {alpha:1, repeatDelay:this.shineSpeed, repeat:-1, yoyo:true}, startAt);
+    this.shineSpeed = Math.random() * (0.02- 0.001) + 0.001;
+    // this.infiniteShiningTween =
+    //   TweenMax.to(this, 2, {alpha:1, repeatDelay:this.shineSpeed, repeat:-1, yoyo:true}, startAt);
 
     this.putOnTheSky();
   }
@@ -19,22 +19,15 @@ class Star extends PIXI.Sprite {
     this.position.y = posY;
   }
 
-  shine() {
-    // if(!this.isAnimating) return;
-    // this.isFadeOut = (this.alpha < 0 || this.alpha > 1) ? !this.isFadeOut : this.isFadeOut;
-    // this.alpha = (this.isFadeOut) ? (this.alpha - this.shineSpeed) : (this.alpha + this.shineSpeed);
-    this.infiniteShiningTween.play();
+  animate() {
+    this.isFadeOut = (this.alpha < 0 || this.alpha > 1) ? !this.isFadeOut : this.isFadeOut;
+    this.alpha = (this.isFadeOut) ? (this.alpha - this.shineSpeed) : (this.alpha + this.shineSpeed);
  }
 
-  unshine(at) {
-    this.infiniteShiningTween.pause(at);
-  }
-
   fall(){
-    if(!this.fallTween) {
-      this.fallTween = TweenMax.to(this, 1, {x: this.position.x - 100, y: this.position.y + 100, alpha: 0});
-    }
-    return this.fallTween;
+    let fallTween = TweenMax.to(this, 1, {x: this.position.x - 100, y: this.position.y + 100});
+    let fadeTween = TweenMax.to(this.scale, 1, {x: 0, y: 0});
+    return [fallTween, fadeTween];
   }
 
   putOnTheSky() {
