@@ -1,5 +1,3 @@
-import {TweenLite} from 'gsap';
-
 class Overlay {
   constructor() {
 

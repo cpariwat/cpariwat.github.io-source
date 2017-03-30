@@ -20,6 +20,8 @@ class Engine {
     location.href = SECTIONS[this.transitionState];
     this.targetSection = '#welcome';
 
+    console.log(`This browser ${PIXI.utils.isWebGLSupported() ? '': 'not'} supported webgl`);
+
     let app = new PIXI.Application(
       BASE_WIDTH,
       window.innerHeight,
@@ -93,30 +95,23 @@ class Engine {
 
 
   _bindPlayElems() {
-    let playElems = document.getElementsByClassName('go-next');
-
-    for (let elem of playElems) {
-      elem.addEventListener("click", () => {
+    $('.go-next').click(() => {
         this.targetSection = SECTIONS[this.transitionState + 1];
         this._forward();
-      });
-    }
+    });
 
-    let linkElems = document.getElementsByClassName('mdl-navigation__link');
-    for (let elem of linkElems) {
-      elem.addEventListener("click", (e) => {
-        e.preventDefault();
-        if (!this.mainTimeline.isActive()) {
-          this.targetSection = e.target.getAttribute("href");
-          // this._transitionToTarget();
-          this.transitionState = SECTIONS.indexOf(this.targetSection);
-          location.href = this.targetSection;
-          document.getElementById('headerTitle').innerHTML = SECTION_NAMES[this.transitionState];
-          $("meta[name='theme-color']").attr('content', SECTION_COLORS[this.transitionState]);
-          this.mainTimeline.seek(this.targetSection);
-        }
-      });
-    }
+    $('.mdl-navigation__link').click((e) => {
+      e.preventDefault();
+      if (!this.mainTimeline.isActive()) {
+        this.targetSection = e.target.getAttribute("href");
+        // this._transitionToTarget();
+        this.transitionState = SECTIONS.indexOf(this.targetSection);
+        location.href = this.targetSection;
+        document.getElementById('headerTitle').innerHTML = SECTION_NAMES[this.transitionState];
+        $("meta[name='theme-color']").attr('content', SECTION_COLORS[this.transitionState]);
+        this.mainTimeline.seek(this.targetSection);
+      }
+    });
   }
 
   _bindResize() {
