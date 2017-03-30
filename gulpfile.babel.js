@@ -122,8 +122,9 @@ gulp.task('browserify', function() {
   return b
     .bundle()
     .pipe(source('main.min.js'))
-    // .pipe(buffer()) // <----- convert from streaming to buffered vinyl file object
-    // .pipe($.uglify())
+    .pipe
+    (buffer()) // <----- convert from streaming to buffered vinyl file object
+    .pipe($.uglify())
     .pipe(gulp.dest('dist/scripts'))
     .pipe(gulp.dest('.tmp/scripts'))
 });

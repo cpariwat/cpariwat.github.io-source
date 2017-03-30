@@ -8,6 +8,7 @@ import Overlay from './overlay';
 // Required to import Plugins even though never called
 import TextPlugin from 'gsap/TextPlugin';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
+
 import {BASE_WIDTH} from 'constants';
 const SECTIONS = ["#welcome", "#works", "#contact-me"];
 const SECTION_NAMES = ['Home', 'Work', 'Contact'];
@@ -16,11 +17,11 @@ const SECTION_COLORS = [ '#fff', '#c90a00', '#6A4A3C'];
 class Engine {
   constructor() {
     this.isForward = true;
+
     this.transitionState = 0;
     location.href = SECTIONS[this.transitionState];
-    this.targetSection = '#welcome';
+    this.targetSection = SECTIONS[this.transitionState];
 
-    console.log(`This browser ${PIXI.utils.isWebGLSupported() ? '': 'not'} supported webgl`);
 
     let app = new PIXI.Application(
       BASE_WIDTH,
@@ -84,7 +85,7 @@ class Engine {
       this.mainTimeline.addPause('end-state-1', this._changeStage());
       let worksScene = new WorksScene(this.stage, this.renderer);
       this.mainTimeline.add(worksScene.in());
-      this.mainTimeline.addPause('#works', ()=> {this._transitionToTarget()});
+      this.mainTimeline.addPause('#works', ()=> { this._transitionToTarget(); });
       this.mainTimeline.add(worksScene.out());
       this.mainTimeline.addPause('end-state-2', this._changeStage());
       let contactScene = new ContactScene(this.stage, this.renderer, this.mainTimeline);
@@ -109,7 +110,7 @@ class Engine {
         location.href = this.targetSection;
         document.getElementById('headerTitle').innerHTML = SECTION_NAMES[this.transitionState];
         $("meta[name='theme-color']").attr('content', SECTION_COLORS[this.transitionState]);
-        this.mainTimeline.seek(this.targetSection);
+        this.mainTimeline.seek(this.targetSection+"-=0.05");
       }
     });
   }
@@ -117,7 +118,7 @@ class Engine {
   _bindResize() {
     window.onresize = () => {
       location.reload();
-    }
+    };
   }
 
  _bindPocketWatch() {
@@ -166,7 +167,6 @@ class Engine {
        this.targetSection = SECTIONS[0];
 
        this._transitionToTarget();
-       this._transitionToTarget();
      }, 1500);
 
      setTimeout(()=>{
@@ -174,18 +174,19 @@ class Engine {
        pocketWatchTl.play();
        $('#pocketWatchWrapper').css({"position": "absolute","top": "0"});
      }, 5000);
+
    });
  }
 
   _bindTransition() {
     let _scrollTimeout = null;
-    let _transition = (e) => {
 
+    $('#content-container').on('DOMMouseScroll mousewheel', (event) => {
       clearTimeout(_scrollTimeout);
 
       _scrollTimeout = setTimeout(() => {
         if (!this.mainTimeline.isActive()) {
-          let target = (e.wheelDelta < 0) ? SECTIONS[this.transitionState + 1] : this.targetSection = SECTIONS[this.transitionState - 1];
+          let target = (event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0) ? SECTIONS[this.transitionState + 1] : this.targetSection = SECTIONS[this.transitionState - 1];
 
           if (target) {
             this.targetSection = target;
@@ -194,10 +195,7 @@ class Engine {
         }
       }, 250);
       return false;
-    };
-    let screen = document.getElementById("content-container");
-    screen.addEventListener("mousewheel", _transition);
-    screen.addEventListener("DOMMouseScroll", _transition);
+    });
 
     let _addNewSwiper = (element) => {
       // get a reference to an element
