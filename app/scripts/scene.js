@@ -8,18 +8,6 @@ class Scene {
     this.ratio = window.innerWidth / BASE_WIDTH;
   }
 
-  // Speed (per millisecond)
-  // return in timeline
-  in() {
-
-  }
-
-  // Speed (per millisecond)
-  // return out timeline
-  out() {
-
-  }
-
   wPer2Pix(percent) {
     return window.innerWidth * percent / 100;
   }

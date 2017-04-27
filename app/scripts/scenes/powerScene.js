@@ -2,7 +2,7 @@ import Scene from '../scene';
 import {TimelineMax, Power3} from 'gsap';
 
 class PowerScene extends Scene {
-  constructor(stage, renderer, resources, animateObject) {
+  constructor(stage, renderer, resources) {
     super(stage, renderer);
 
     this.resources = resources;
@@ -47,8 +47,6 @@ class PowerScene extends Scene {
     }
 
     yDrawer.update();
-    //
-    // this.stage.addChild(new PIXI.Sprite(PIXI.Texture.fromImage(svgToDataUrl(yDrawer.renderer.domElement))));
   }
 
   _during() {
@@ -66,7 +64,6 @@ class PowerScene extends Scene {
       {x: this.wPer2Pix(50), y: this.hPer2Pix(150)},
       {x: this.wPer2Pix(50), y: this.hPer2Pix(30)},
       0);
-    //
 
     return tl
   }
@@ -81,12 +78,6 @@ class PowerScene extends Scene {
     tl.to(this.redSun.position, 1,
       {x: this.wPer2Pix(50) - (this.redSun.width/2), y: this.hPer2Pix(50) - (this.redSun.height/2)},
       0);
-
-    //
-    // for(let i=150; i>=0; i--) {
-    //   tl.fromTo(`#two_${i}`, 0.005, {fillOpacity: 0}, {fillOpacity: 1});
-    // }
-
     return tl
   }
 }

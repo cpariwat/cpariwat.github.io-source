@@ -33,15 +33,6 @@ class WorksScene extends Scene {
   }
 
   _during() {
-    // TweenMax.to('#miniMe #bouche', 1, {
-    //   scaleY: '20',
-    //   ease: Power2.easeInOut,
-    //   delay: 0,
-    //   repeat: -1,
-    //   yoyo: true,
-    //   repeatDelay: 0
-    // });
-
     TweenMax.to('#miniMe #manglogo', 0.5, {
       fill: '#ddd',
       ease: RoughEase.ease.config({
@@ -65,13 +56,6 @@ class WorksScene extends Scene {
 
     tl.to('#topHeader', 0.5, {css: {className: '-=welcome'}});
     tl.to('.top-header', 0.5, {css: {className: '+=works'}});
-    // for (let i = 1; i <= this.wallLineCount; i++) {
-    //
-    //   // let fromX = (i%2 == 0) ? '0% 50%' : '100% 50%';
-    //   let fromX = (i % 2 === 0) ? -window.innerWidth/4 : window.innerWidth * 7/4;
-    //   tl.set(`#mur #two_${i}`, {transformOrigin: '0 50%'});
-    //   tl.fromTo(`#mur #two_${i}`, 1, {x: fromX}, {x: '25%'}, 0);
-    // }
     tl.fromTo(`#mur`, 0.5, {opacity: 0}, {opacity: 1}, 0);
 
     return tl;

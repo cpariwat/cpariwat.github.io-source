@@ -13,9 +13,6 @@ class ParalaxObject extends PIXI.extras.TilingSprite {
   animate() {
     if(!this.isAnimating) return;
     this.tilePosition.x -= this.delta;
-    //
-    // this.isDown = (this.position.y > this.upDownRange[0] || this.position.y < this.upDownRange[1]) ? !this.isDown : this.isDown;
-    // this.position.y = (this.isDown) ? (this.position.y - this.delta/2) : (this.position.y + this.delta/2);
   }
 
   setPosition(posX, posY) {

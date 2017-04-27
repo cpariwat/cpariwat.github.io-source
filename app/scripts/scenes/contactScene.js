@@ -42,13 +42,6 @@ class ContactScene extends Scene {
 
   in() {
     let tl = new TimelineMax();
-    // tl.to("#dayBack", 1, {css:{opacity:0}, ease: Power3.easeOut}, 0);
-    // tl.to("#contactBack", 1, {css:{opacity:1}, ease: Power3.easeOut}, 0);
-    // //
-    // for(let i=150; i>=0; i--) {
-    //   tl.to(`#two_${i}`, 0.005, {fill: '#039BE5'});
-    // }
-
 
     tl.to('#topHeader', 0.5, {css: {className: "-=works"}});
     tl.to('#topHeader', 0.5, {css: {className: "+=contact"}});
@@ -57,8 +50,6 @@ class ContactScene extends Scene {
       {bottom: '-100%'},
       {bottom: '-5%'},
       0.5);
-
-    // tl.to('#pocketWatch', 0.2, {css: {position: 'absolute'}});
 
     tl.fromTo('#startOver', 0.5, {opacity: 0}, {opacity: 1});
     return tl
